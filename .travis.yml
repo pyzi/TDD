@@ -13,8 +13,7 @@ install:
     - pip install python-coveralls
     - pip install coverage
 
-before_script:
+script:
     - python manage.py test
-
 after_success:
     - coveralls
