@@ -1,10 +1,9 @@
 language: python
-python: 
+python:
     - "3.5"
 env:
     matrix:
-        - DJANGO="Django<=1.10,<1.11"
-        - DJANGO="Django>=1.11,<1.12"
+        - DJANGO="Django>=1.11"
     branches:
         only:
             - master
@@ -18,4 +17,4 @@ before_script:
     - python manage.py test
 
 after_success:
-    - coveralls    
+    - coveralls
